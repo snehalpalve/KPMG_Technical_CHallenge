@@ -15,9 +15,17 @@ variable "azurerm_subnet" {
 }
 
 variable "admin_username" {
-  
+    default = "abc"
 }
 
 variable "admin_password" {
-  
+   default = "abc"
+}
+
+variable "administrator_login" {
+    default = "abc"
+}
+
+variable "administrator_login_password" {
+    default = "abc"
 }
