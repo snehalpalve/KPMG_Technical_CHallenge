@@ -13,5 +13,5 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "KPMG" {
     name = "KPMG"
-    location= "West-US"
+    location= "West US"
 }
