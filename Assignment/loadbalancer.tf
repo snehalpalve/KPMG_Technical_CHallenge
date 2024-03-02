@@ -1,15 +1,15 @@
 # Create Azure Load Balancer for web tier
 resource "azurerm_public_ip" "web_lb_public_ip" {
   name                = "PublicIPForLB"
-  location            = "westus"
-  resource_group_name = "KPMG"
+  location            = var.location
+  resource_group_name = var.azurerm_resource_group
   allocation_method   = "Static"
 }
 
 resource "azurerm_lb" "web_lb" {
   name                = "web-lb"
-  location            = "westus"  
-  resource_group_name = "KPMG"
+  location            = var.location
+  resource_group_name = var.azurerm_resource_group
 
   frontend_ip_configuration {
     name                 = "PublicIPAddress"

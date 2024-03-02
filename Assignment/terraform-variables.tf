@@ -29,3 +29,8 @@ variable "administrator_login" {
 variable "administrator_login_password" {
     default = "abc"
 }
+
+variable "backend_ip_addresses" {
+  type    = list(string)
+  default = ["10.0.1.5", "10.0.1.4"]
+}
